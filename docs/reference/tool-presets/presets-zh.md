@@ -58,6 +58,7 @@
 | im.v1.chatMembers.get | 获取群成员 | | ✓ | ✓ | | | | | |
 | im.v1.message.create | 发送消息 | ✓ | ✓ | ✓ | | | | | |
 | im.v1.message.list | 获取消息列表 | ✓ | ✓ | ✓ | | | | | |
+| im.builtin.readChatMessages | 以用户身份读取群聊消息 | | ✓ | ✓ | | | | | |
 | bitable.v1.app.create | 创建多维表格 | | ✓ | | ✓ | ✓ | | | |
 | bitable.v1.appTable.create | 创建多维表格数据表 | | ✓ | | ✓ | ✓ | | | |
 | bitable.v1.appTable.list | 获取多维表格数据表列表 | | ✓ | | ✓ | ✓ | | | |

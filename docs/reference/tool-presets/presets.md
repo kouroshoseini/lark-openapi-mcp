@@ -58,6 +58,7 @@ You can also combine presets with individual tools:
 | im.v1.chatMembers.get | Get group members | | ✓ | ✓ | | | | | |
 | im.v1.message.create | Send messages | ✓ | ✓ | ✓ | | | | | |
 | im.v1.message.list | Get message list | ✓ | ✓ | ✓ | | | | | |
+| im.builtin.readChatMessages | Read group chat messages as user | | ✓ | ✓ | | | | | |
 | bitable.v1.app.create | Create base | | ✓ | | ✓ | ✓ | | | |
 | bitable.v1.appTable.create | Create base data table | | ✓ | | ✓ | ✓ | | | |
 | bitable.v1.appTable.list | Get base data table list | | ✓ | | ✓ | ✓ | | | |

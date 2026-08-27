@@ -1042,6 +1042,7 @@
 | im.v1.message.forward | [转发消息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/forward) | 调用该接口将一条指定的消息转发给用户、群聊或话题 |
 | im.v1.message.get | [获取指定消息的内容](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/get) | 调用该接口通过消息的 `message_id` 查询消息内容 |
 | im.v1.message.list | [获取会话历史消息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/list) | 获取指定会话（包括单聊、群组）内的历史消息（即聊天记录） |
+| im.builtin.readChatMessages | [读取聊天消息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/list) | 以用户身份读取群聊的历史消息，返回每条消息的发送者、时间、消息类型和可读文本。支持分页。 |
 | im.v1.message.mergeForward | [合并转发消息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/merge_forward) | 将来自同一个会话内的多条消息，合并转发给指定的用户、群聊或话题 |
 | im.v1.message.patch | [更新已发送的消息卡片](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/patch) | 通过消息 ID（message_id）更新已发送的消息卡片的内容 |
 | im.v1.message.pushFollowUp | [添加跟随气泡](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/push_follow_up) | 调用该接口在最新一条消息下方添加气泡样式的内容，当消息接收者点击气泡或者新消息到达后，气泡消失 |

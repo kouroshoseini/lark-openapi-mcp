@@ -1618,10 +1618,16 @@ export const imV1MessageGet = {
   path: '/open-apis/im/v1/messages/:message_id',
   httpMethod: 'GET',
   description: '[Feishu/Lark]-消息-消息管理-获取指定消息的内容-调用该接口通过消息的 `message_id` 查询消息内容',
-  accessTokens: ['tenant'],
+  accessTokens: ['tenant', 'user'],
   schema: {
     params: z
-      .object({ user_id_type: z.enum(['open_id', 'union_id', 'user_id']).describe('用户ID类型').optional() })
+      .object({
+        user_id_type: z.enum(['open_id', 'union_id', 'user_id']).describe('用户ID类型').optional(),
+        card_msg_content_type: z
+          .enum(['user_card_content'])
+          .describe('控制卡片消息的返回格式。传入 `user_card_content` 时返回发送消息时使用的原始卡片 JSON。')
+          .optional(),
+      })
       .optional(),
     path: z.object({
       message_id: z
@@ -1630,6 +1636,7 @@ export const imV1MessageGet = {
           '消息 ID。ID 获取方式： - 调用[发送消息]接口后，从响应结果的 `message_id` 参数获取。- 监听[接收消息]事件，当触发该事件后可以从事件体内获取消息的 `message_id`。- 调用[获取会话历史消息]接口，从响应结果的 `message_id` 参数获取',
         ),
     }),
+    useUAT: z.boolean().describe('使用用户访问令牌，否则使用租户访问令牌').optional(),
   },
 };
 export const imV1MessageList = {
@@ -1639,7 +1646,7 @@ export const imV1MessageList = {
   path: '/open-apis/im/v1/messages',
   httpMethod: 'GET',
   description: '[Feishu/Lark]-消息-消息管理-获取会话历史消息-获取指定会话（包括单聊、群组）内的历史消息（即聊天记录）',
-  accessTokens: ['tenant'],
+  accessTokens: ['tenant', 'user'],
   schema: {
     params: z.object({
       container_id_type: z
@@ -1674,6 +1681,7 @@ export const imV1MessageList = {
         )
         .optional(),
     }),
+    useUAT: z.boolean().describe('使用用户访问令牌，否则使用租户访问令牌').optional(),
   },
 };
 export const imV1MessageMergeForward = {

@@ -1719,10 +1719,18 @@ export const imV1MessageGet = {
   httpMethod: 'GET',
   description:
     '[Feishu/Lark]-Messaging-Message management-Obtain the content of the specified message-Query message content with message_id',
-  accessTokens: ['tenant'],
+  accessTokens: ['tenant', 'user'],
   schema: {
     params: z
-      .object({ user_id_type: z.enum(['open_id', 'union_id', 'user_id']).describe('User ID type').optional() })
+      .object({
+        user_id_type: z.enum(['open_id', 'union_id', 'user_id']).describe('User ID type').optional(),
+        card_msg_content_type: z
+          .enum(['user_card_content'])
+          .describe(
+            'Controls the return format of card messages. If `user_card_content` is provided, the original card JSON used when sending the message is returned.',
+          )
+          .optional(),
+      })
       .optional(),
     path: z.object({
       message_id: z
@@ -1731,6 +1739,7 @@ export const imV1MessageGet = {
           'Message ID. How to get the ID:- After calling the [Send Message] interface, get it from the `message_id` parameter of the response result.- Listen to the [Receive Message] event. When the event is triggered, you can get the `message_id` of the message from the event body.- Call the [Get Session History Messages] interface and get it from the `message_id` parameter of the response result',
         ),
     }),
+    useUAT: z.boolean().describe('Use user access token, otherwise use tenant access token').optional(),
   },
 };
 export const imV1MessageList = {
@@ -1741,7 +1750,7 @@ export const imV1MessageList = {
   httpMethod: 'GET',
   description:
     '[Feishu/Lark]-Messaging-Message management-Get chat history-Obtains chat history (chat records) of chats (including private chats and group chats)',
-  accessTokens: ['tenant'],
+  accessTokens: ['tenant', 'user'],
   schema: {
     params: z.object({
       container_id_type: z
@@ -1783,6 +1792,7 @@ export const imV1MessageList = {
         )
         .optional(),
     }),
+    useUAT: z.boolean().describe('Use user access token, otherwise use tenant access token').optional(),
   },
 };
 export const imV1MessageMergeForward = {
