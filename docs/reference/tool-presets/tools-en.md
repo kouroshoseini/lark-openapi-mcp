@@ -1178,6 +1178,9 @@
 ## Business domain: okrV1
 | MCP Tool Name | API | Description | 
 | --- | --- | --- |
+| okr.builtin.readMyOkr | [Get the user's OKR list](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/user-okr/list) | Read the current user's OKR (objectives and key results) for a period or year, returning content, score, progress percent and status. Resolves the current user via user access token when user_id is omitted. Scores and status are read-only. |
+| okr.builtin.addProgress | [Create OKR progress record](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/progress_record/create) | Create a progress record (note) on an objective or key result from a plain-text note. |
+| okr.builtin.updateProgress | [Update OKR progress](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/progress_record/update) | Update the content of an existing OKR progress record by progress_id. |
 | okr.v1.okr.batchGet | [Get OKR in bulk](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/okr/batch_get) | Get OKR in batches based on OKR id |
 | okr.v1.periodRule.list | [Get OKR period rules](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/period_rule/list) | Get a list of periodic rules for your tenant |
 | okr.v1.period.create | [Create OKR period](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/period/create) | Creare a OKR period according to given period rule |

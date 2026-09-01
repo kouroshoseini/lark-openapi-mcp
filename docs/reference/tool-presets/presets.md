@@ -50,39 +50,45 @@ You can also combine presets with individual tools:
 
 ## Preset Tool Collections
 
-| Tool Name | Function Description | preset.light | preset.default (Default) | preset.im.default | preset.base.default | preset.base.batch | preset.doc.default | preset.task.default | preset.calendar.default |
-| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| im.v1.chat.create | Create a group chat | | ✓ | ✓ | | | | | |
-| im.v1.chat.list | Get group chat list | | ✓ | ✓ | | | | | |
-| im.v1.chat.search | Search group chats | ✓ | | | | | | | |
-| im.v1.chatMembers.get | Get group members | | ✓ | ✓ | | | | | |
-| im.v1.message.create | Send messages | ✓ | ✓ | ✓ | | | | | |
-| im.v1.message.list | Get message list | ✓ | ✓ | ✓ | | | | | |
-| bitable.v1.app.create | Create base | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTable.create | Create base data table | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTable.list | Get base data table list | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTableField.list | Get base data table field list | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTableRecord.search | Search base data table records | ✓ | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTableRecord.create | Create base data table records | | ✓ | | ✓ | | | | |
-| bitable.v1.appTableRecord.batchCreate | Batch create base data table records | ✓ | | | | ✓ | | | |
-| bitable.v1.appTableRecord.update | Update base data table records | | ✓ | | ✓ | | | | |
-| bitable.v1.appTableRecord.batchUpdate | Batch update base data table records | | | | | ✓ | | | |
-| docx.v1.document.rawContent | Get document content | ✓ | ✓ | | | | ✓ | | |
-| docx.builtin.import | Import documents | ✓ | ✓ | | | | ✓ | | |
-| docx.builtin.search | Search documents | ✓ | ✓ | | | | ✓ | | |
-| drive.v1.permissionMember.create | Add collaborator permissions | | ✓ | | | | ✓ | | |
-| wiki.v2.space.getNode | Get Wiki node | ✓ | ✓ | | | | ✓ | | |
-| wiki.v1.node.search | Search Wiki nodes | | ✓ | | | | ✓ | | |
-| contact.v3.user.batchGetId | Batch get user IDs | ✓ | ✓ | | | | | | |
-| task.v2.task.create | Create task | | | | | | | ✓ | |
-| task.v2.task.patch | Modify task | | | | | | | ✓ | |
-| task.v2.task.addMembers | Add task members | | | | | | | ✓ | |
-| task.v2.task.addReminders | Add task reminders | | | | | | | ✓ | |
-| calendar.v4.calendarEvent.create | Create calendar event | | | | | | | | ✓ |
-| calendar.v4.calendarEvent.patch | Modify calendar event | | | | | | | | ✓ |
-| calendar.v4.calendarEvent.get | Get calendar event | | | | | | | | ✓ |
-| calendar.v4.freebusy.list | Query free/busy status | | | | | | | | ✓ |
-| calendar.v4.calendar.primary | Get primary calendar | | | | | | | | ✓ |
+| Tool Name | Function Description | preset.light | preset.default (Default) | preset.im.default | preset.base.default | preset.base.batch | preset.doc.default | preset.task.default | preset.calendar.default | preset.okr.default |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| im.v1.chat.create | Create a group chat | | ✓ | ✓ | | | | | | |
+| im.v1.chat.list | Get group chat list | | ✓ | ✓ | | | | | | |
+| im.v1.chat.search | Search group chats | ✓ | | | | | | | | |
+| im.v1.chatMembers.get | Get group members | | ✓ | ✓ | | | | | | |
+| im.v1.message.create | Send messages | ✓ | ✓ | ✓ | | | | | | |
+| im.v1.message.list | Get message list | ✓ | ✓ | ✓ | | | | | | |
+| bitable.v1.app.create | Create base | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTable.create | Create base data table | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTable.list | Get base data table list | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTableField.list | Get base data table field list | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTableRecord.search | Search base data table records | ✓ | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTableRecord.create | Create base data table records | | ✓ | | ✓ | | | | | |
+| bitable.v1.appTableRecord.batchCreate | Batch create base data table records | ✓ | | | | ✓ | | | | |
+| bitable.v1.appTableRecord.update | Update base data table records | | ✓ | | ✓ | | | | | |
+| bitable.v1.appTableRecord.batchUpdate | Batch update base data table records | | | | | ✓ | | | | |
+| docx.v1.document.rawContent | Get document content | ✓ | ✓ | | | | ✓ | | | |
+| docx.builtin.import | Import documents | ✓ | ✓ | | | | ✓ | | | |
+| docx.builtin.search | Search documents | ✓ | ✓ | | | | ✓ | | | |
+| drive.v1.permissionMember.create | Add collaborator permissions | | ✓ | | | | ✓ | | | |
+| wiki.v2.space.getNode | Get Wiki node | ✓ | ✓ | | | | ✓ | | | |
+| wiki.v1.node.search | Search Wiki nodes | | ✓ | | | | ✓ | | | |
+| contact.v3.user.batchGetId | Batch get user IDs | ✓ | ✓ | | | | | | | |
+| task.v2.task.create | Create task | | | | | | | ✓ | | |
+| task.v2.task.patch | Modify task | | | | | | | ✓ | | |
+| task.v2.task.addMembers | Add task members | | | | | | | ✓ | | |
+| task.v2.task.addReminders | Add task reminders | | | | | | | ✓ | | |
+| calendar.v4.calendarEvent.create | Create calendar event | | | | | | | | ✓ | |
+| calendar.v4.calendarEvent.patch | Modify calendar event | | | | | | | | ✓ | |
+| calendar.v4.calendarEvent.get | Get calendar event | | | | | | | | ✓ | |
+| calendar.v4.freebusy.list | Query free/busy status | | | | | | | | ✓ | |
+| calendar.v4.calendar.primary | Get primary calendar | | | | | | | | ✓ | |
+| okr.builtin.readMyOkr | Read my OKR (objectives & key results) | | | | | | | | | ✓ |
+| okr.builtin.addProgress | Add OKR progress on an objective/key result | | | | | | | | | ✓ |
+| okr.builtin.updateProgress | Update an OKR progress record | | | | | | | | | ✓ |
+| okr.v1.userOkr.list | Get the user's OKR list | | | | | | | | | ✓ |
+| okr.v1.period.list | Get the OKR cycle list | | | | | | | | | ✓ |
+| okr.v1.okr.batchGet | Get OKR in bulk | | | | | | | | | ✓ |
 
 > **Note**: In the table, "✓" indicates the tool is included in that preset. Using `-t preset.xxx` will enable tools marked with "✓" in the corresponding column.
 
@@ -111,6 +117,9 @@ Task management focused preset for creating, modifying, and managing tasks with 
 
 ### preset.calendar.default
 Calendar management preset for creating, modifying events, and querying availability.
+
+### preset.okr.default
+OKR preset for reading your objectives and key results (including score, progress percent and status) and updating progress via progress records. Note: OKR scores and status are read-only via the API; updates are made through progress records. Reading "my" OKR requires a user access token (`--oauth` and `--token-mode user_access_token`), or a tenant token with the app-identity access-to-OKR permission.
 
 ## Related Documentation
 

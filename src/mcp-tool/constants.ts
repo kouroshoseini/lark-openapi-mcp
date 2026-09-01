@@ -37,6 +37,10 @@ export enum PresetName {
    * Calendar event management tools
    */
   CALENDAR_DEFAULT = 'preset.calendar.default',
+  /**
+   * OKR tools for reading objectives/key results and updating progress
+   */
+  OKR_DEFAULT = 'preset.okr.default',
 }
 
 export const presetLightToolNames: ToolName[] = [
@@ -106,6 +110,15 @@ export const presetCalendarToolNames: ToolName[] = [
   'calendar.v4.calendar.primary',
 ];
 
+export const presetOkrToolNames: ToolName[] = [
+  'okr.builtin.readMyOkr',
+  'okr.builtin.addProgress',
+  'okr.builtin.updateProgress',
+  'okr.v1.userOkr.list',
+  'okr.v1.period.list',
+  'okr.v1.okr.batchGet',
+];
+
 export const defaultToolNames: ToolName[] = [
   ...presetImToolNames,
   ...presetBaseToolNames,
@@ -122,4 +135,5 @@ export const presetTools: Record<PresetName, ToolName[]> = {
   [PresetName.DOC_DEFAULT]: presetDocToolNames,
   [PresetName.TASK_DEFAULT]: presetTaskToolNames,
   [PresetName.CALENDAR_DEFAULT]: presetCalendarToolNames,
+  [PresetName.OKR_DEFAULT]: presetOkrToolNames,
 };

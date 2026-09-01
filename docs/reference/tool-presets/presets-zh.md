@@ -50,39 +50,45 @@
 
 ## 预设工具集详表
 
-| 工具名称 | 功能描述 | preset.light | preset.default (默认) | preset.im.default | preset.base.default | preset.base.batch | preset.doc.default | preset.task.default | preset.calendar.default |
-| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| im.v1.chat.create | 创建群 | | ✓ | ✓ | | | | | |
-| im.v1.chat.list | 获取群列表 | | ✓ | ✓ | | | | | |
-| im.v1.chat.search | 搜索群 | ✓ | | | | | | | |
-| im.v1.chatMembers.get | 获取群成员 | | ✓ | ✓ | | | | | |
-| im.v1.message.create | 发送消息 | ✓ | ✓ | ✓ | | | | | |
-| im.v1.message.list | 获取消息列表 | ✓ | ✓ | ✓ | | | | | |
-| bitable.v1.app.create | 创建多维表格 | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTable.create | 创建多维表格数据表 | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTable.list | 获取多维表格数据表列表 | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTableField.list | 获取多维表格数据表字段列表 | | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTableRecord.search | 搜索多维表格数据表记录 | ✓ | ✓ | | ✓ | ✓ | | | |
-| bitable.v1.appTableRecord.create | 创建多维表格数据表记录 | | ✓ | | ✓ | | | | |
-| bitable.v1.appTableRecord.batchCreate | 批量创建多维表格数据表记录 | ✓ | | | | ✓ | | | |
-| bitable.v1.appTableRecord.update | 更新多维表格数据表记录 | | ✓ | | ✓ | | | | |
-| bitable.v1.appTableRecord.batchUpdate | 批量更新多维表格数据表记录 | | | | | ✓ | | | |
-| docx.v1.document.rawContent | 获取文档内容 | ✓ | ✓ | | | | ✓ | | |
-| docx.builtin.import | 导入文档 | ✓ | ✓ | | | | ✓ | | |
-| docx.builtin.search | 搜索文档 | ✓ | ✓ | | | | ✓ | | |
-| drive.v1.permissionMember.create | 添加协作者权限 | | ✓ | | | | ✓ | | |
-| wiki.v2.space.getNode | 获取知识库节点 | ✓ | ✓ | | | | ✓ | | |
-| wiki.v1.node.search | 搜索知识库节点 | | ✓ | | | | ✓ | | |
-| contact.v3.user.batchGetId | 批量获取用户ID | ✓ | ✓ | | | | | | |
-| task.v2.task.create | 创建任务 | | | | | | | ✓ | |
-| task.v2.task.patch | 修改任务 | | | | | | | ✓ | |
-| task.v2.task.addMembers | 添加任务成员 | | | | | | | ✓ | |
-| task.v2.task.addReminders | 添加任务提醒 | | | | | | | ✓ | |
-| calendar.v4.calendarEvent.create | 创建日历事件 | | | | | | | | ✓ |
-| calendar.v4.calendarEvent.patch | 修改日历事件 | | | | | | | | ✓ |
-| calendar.v4.calendarEvent.get | 获取日历事件 | | | | | | | | ✓ |
-| calendar.v4.freebusy.list | 查询忙闲状态 | | | | | | | | ✓ |
-| calendar.v4.calendar.primary | 获取主日历 | | | | | | | | ✓ |
+| 工具名称 | 功能描述 | preset.light | preset.default (默认) | preset.im.default | preset.base.default | preset.base.batch | preset.doc.default | preset.task.default | preset.calendar.default | preset.okr.default |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| im.v1.chat.create | 创建群 | | ✓ | ✓ | | | | | | |
+| im.v1.chat.list | 获取群列表 | | ✓ | ✓ | | | | | | |
+| im.v1.chat.search | 搜索群 | ✓ | | | | | | | | |
+| im.v1.chatMembers.get | 获取群成员 | | ✓ | ✓ | | | | | | |
+| im.v1.message.create | 发送消息 | ✓ | ✓ | ✓ | | | | | | |
+| im.v1.message.list | 获取消息列表 | ✓ | ✓ | ✓ | | | | | | |
+| bitable.v1.app.create | 创建多维表格 | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTable.create | 创建多维表格数据表 | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTable.list | 获取多维表格数据表列表 | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTableField.list | 获取多维表格数据表字段列表 | | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTableRecord.search | 搜索多维表格数据表记录 | ✓ | ✓ | | ✓ | ✓ | | | | |
+| bitable.v1.appTableRecord.create | 创建多维表格数据表记录 | | ✓ | | ✓ | | | | | |
+| bitable.v1.appTableRecord.batchCreate | 批量创建多维表格数据表记录 | ✓ | | | | ✓ | | | | |
+| bitable.v1.appTableRecord.update | 更新多维表格数据表记录 | | ✓ | | ✓ | | | | | |
+| bitable.v1.appTableRecord.batchUpdate | 批量更新多维表格数据表记录 | | | | | ✓ | | | | |
+| docx.v1.document.rawContent | 获取文档内容 | ✓ | ✓ | | | | ✓ | | | |
+| docx.builtin.import | 导入文档 | ✓ | ✓ | | | | ✓ | | | |
+| docx.builtin.search | 搜索文档 | ✓ | ✓ | | | | ✓ | | | |
+| drive.v1.permissionMember.create | 添加协作者权限 | | ✓ | | | | ✓ | | | |
+| wiki.v2.space.getNode | 获取知识库节点 | ✓ | ✓ | | | | ✓ | | | |
+| wiki.v1.node.search | 搜索知识库节点 | | ✓ | | | | ✓ | | | |
+| contact.v3.user.batchGetId | 批量获取用户ID | ✓ | ✓ | | | | | | | |
+| task.v2.task.create | 创建任务 | | | | | | | ✓ | | |
+| task.v2.task.patch | 修改任务 | | | | | | | ✓ | | |
+| task.v2.task.addMembers | 添加任务成员 | | | | | | | ✓ | | |
+| task.v2.task.addReminders | 添加任务提醒 | | | | | | | ✓ | | |
+| calendar.v4.calendarEvent.create | 创建日历事件 | | | | | | | | ✓ | |
+| calendar.v4.calendarEvent.patch | 修改日历事件 | | | | | | | | ✓ | |
+| calendar.v4.calendarEvent.get | 获取日历事件 | | | | | | | | ✓ | |
+| calendar.v4.freebusy.list | 查询忙闲状态 | | | | | | | | ✓ | |
+| calendar.v4.calendar.primary | 获取主日历 | | | | | | | | ✓ | |
+| okr.builtin.readMyOkr | 读取我的 OKR（目标与关键结果） | | | | | | | | | ✓ |
+| okr.builtin.addProgress | 在目标/关键结果上新增 OKR 进展 | | | | | | | | | ✓ |
+| okr.builtin.updateProgress | 更新 OKR 进展记录 | | | | | | | | | ✓ |
+| okr.v1.userOkr.list | 获取用户的 OKR 列表 | | | | | | | | | ✓ |
+| okr.v1.period.list | 获取 OKR 周期列表 | | | | | | | | | ✓ |
+| okr.v1.okr.batchGet | 批量获取 OKR | | | | | | | | | ✓ |
 
 > **说明**：表格中"✓"表示该工具包含在对应的预设工具集中。使用`-t preset.xxx`参数时，会启用该列标有"✓"的工具。
 
@@ -111,6 +117,9 @@
 
 ### preset.calendar.default
 日历管理预设，用于创建、修改事件和查询可用性。
+
+### preset.okr.default
+OKR 预设，用于读取你的目标与关键结果（包括得分、进度百分比和状态），并通过进展记录更新工作进展。注意：OKR 的得分与状态通过 API 为只读，更新通过进展记录完成。读取"我的"OKR 需要用户访问令牌（`--oauth` 与 `--token-mode user_access_token`），或具有应用身份访问 OKR 权限的租户令牌。
 
 ## 相关文档
 

@@ -1189,6 +1189,9 @@
 ## 业务域: okrV1
 | MCP 工具名称 | API | 描述 | 
 | --- | --- | --- |
+| okr.builtin.readMyOkr | [获取用户的 OKR 列表](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/user-okr/list) | 读取当前用户在指定周期或年份的 OKR（目标与关键结果），返回内容、得分、进度百分比和状态。未提供 user_id 时通过用户访问令牌解析当前用户。得分与状态为只读。 |
+| okr.builtin.addProgress | [创建 OKR 进展记录](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/progress_record/create) | 在目标或关键结果上根据纯文本笔记创建一条进展记录。 |
+| okr.builtin.updateProgress | [更新 OKR 进展记录](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/progress_record/update) | 按 progress_id 更新已有 OKR 进展记录的内容。 |
 | okr.v1.okr.batchGet | [批量获取 OKR](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/okr/batch_get) | 根据 OKR id 批量获取 OKR |
 | okr.v1.periodRule.list | [获取 OKR 周期规则](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/period_rule/list) | 获取租户的周期规则列表 |
 | okr.v1.period.create | [创建 OKR 周期](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/okr-v1/period/create) | 根据周期规则创建一个 OKR 周期 |
